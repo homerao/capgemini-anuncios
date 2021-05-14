@@ -40,7 +40,19 @@ emitir o relatório com todos os dados do anúncio.
 # Como executar o projeto
 ```bash
 ## clonar repositório
+lembrando que para realizar este tutorial vocÊ precisará ter instalado o maven em sua máquina
+Abra o terminal do windows
+no windows vá até seus documentos pessoais pelo terminal
+digite os seguintes comandos
+mkdir <pasta_do_projeto>
+cd <pasta_do_projeto>
 git clone https://github.com/homerao/capgemini-anuncios.git
+<aguarde o projeto ser clonado>
+cd capgemini-investimento
+mvn clean package deploy
+
+
+
 
 
 ```
