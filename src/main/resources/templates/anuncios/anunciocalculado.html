@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<title>Calculo de Anuncio</title>
+</head>
+<body>
+<h1>Relatório de Anuncio</h1>
+<br/>
+ <a href="/home">Home</a>
+ <a href="/anuncios/cadastro">Novo anuncio</a>
+ <a href="/anuncios/list">Todos os anuncios</a>
+ <br/>
+<table border="3px">
+<tr>
+<th>Cliente</th>
+<th>Nome Anuncio</th>
+<th>Valor diário</th>
+<th>Valor total</th>
+<th>Qtd Dias investidos</th> 
+<th>Cliques diários</th>
+<th>Compartilhamentos diários</th>
+<th>Visualizações diárias</th>
+<th>Cliques totais</th>
+<th>Compartilhamentos totais</th>
+<th>Visualizações totais</th>
+</tr>
+<tr>
+<td th:text="${anuncio.cliente}"> 
+</td> 
+<td th:text="${anuncio.nomeAnuncio}"> 
+</td> 
+<td th:text="${anuncio.valorDiario}"> 
+</td> 
+<td th:text="${anuncio.valorTotal}">
+</td> 
+<td th:text="${anuncio.qtdDiasInvestimento}">  
+</td> 
+<td th:text="${anuncio.qtdCliques}"> 
+</td> 
+<td th:text="${anuncio.qtdCompartilhamentos}"> 
+</td> 
+<td th:text="${anuncio.qtdVisualizacoes}"> 
+</td>
+<td th:text="${anuncio.totalCliques}"> 
+</td> 
+<td th:text="${anuncio.totalCompartilhamentos}"> 
+</td> 
+<td th:text="${anuncio.totalVisualizacoes}"> 
+</tr>
+</table>
+</body>
+</html>

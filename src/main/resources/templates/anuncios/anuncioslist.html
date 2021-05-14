@@ -16,7 +16,7 @@
  <tr><th colspan="5">Filtro por  Cliente <form action="/anuncios/listbyclientes" method="get" accept-charset="utf-8">
  <input type="text" size="50px" placeholder="Filtro por cliente"  name="cliente" />
  <input type="submit" value="Filtrar" />
- </form>  </th> <th colspan="7">Filtro por data
+ </form>  </th> <th colspan="5">Filtro por data
  <form action="/anuncios/listbydata" method="get" accept-charset="utf-8">
  <input type="date" name="dataInicio" pattern="yyyy-MM-dd" required="true"  />
  
@@ -25,7 +25,7 @@
  </form>
  </th>
   </tr>
- <tr><th> Id </th><th> Cliente  </th><th>  Nome do Anuncio </th><th>Data Inicio</th><th>Data fim</th><th>Investimento R$</th><th>Qtd Cliques</th><th>Qtd Compartilhamentos</th><th>Qtd Visualizações</th><th colspan="3">Ações</th> </tr>
+ <tr><th> Id </th><th> Cliente  </th><th>  Nome do Anuncio </th><th>Data Inicio</th><th>Data fim</th><th>Investimento R$</th><th colspan="3">Ações</th> </tr>
 
 <tr th:each="anuncio : ${anuncios}">
  <td th:text="${anuncio.id}"></td>
@@ -34,12 +34,10 @@
  <td th:text="${#calendars.format(anuncio.dataInicio,'dd/MM/yyyy')}"></td>
  <td th:text="${#calendars.format(anuncio.dataFim,'dd/MM/yyyy')}"></td>
  <td th:text="${anuncio.investimentoDiario}"> </td>
- <td >Vazio</td>
- <td >Vazio</td>
- <td >Vazio</td>
+
  <td ><a th:href="@{/anuncios/deletar/{id}(id=${anuncio.id})}" onclick="return confirm('Você tem certeza ?')" >Deletar</a></td>
  <td ><a th:href="@{/anuncios/atualizar/{id}(id=${anuncio.id})}">Atualizar</a></td>
- <td ><a th:href="@{/anuncios/calcular/{id}(id=${anuncio.id})}">Calcular Visualizações</a></td>
+ <td ><a th:href="@{/anuncios/calcular/{id}(id=${anuncio.id})}">Relatório</a></td>
  
 </tr>
 

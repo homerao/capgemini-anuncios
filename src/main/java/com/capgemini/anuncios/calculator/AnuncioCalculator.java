@@ -32,14 +32,57 @@ public class AnuncioCalculator {
     }
     
     public static int maximoDeCliques(Double investimento) {
-		return 0;
+    	// obtem o valor inicial de visualizações por dinheiro investido
+    	int visualizacoesIniciaisPorInvestimento = (int) Math.ceil((double)(investimento * 30));
+    	// obtem os clicks iniciais do valor investido
+    	int clicksIniciaisPorVisualizacoes = (int) (visualizacoesIniciaisPorInvestimento * 0.12);
+    	// obtem os compartilhamentos
+    	int compartilhamentosIniciais = (int) (clicksIniciaisPorVisualizacoes * 0.15);
+    	int novasVisualizacoes =0;
+        int novosClicks =0 ;
+        int novosCompartilhamentos = 0;
+        int totaldeCliques = 0;
+        // este for é para simular os compartilhamentos em sequência
+    	for(int i = 1; i <= 4; i++) {
+    	   
+    	   novasVisualizacoes = (int)  (compartilhamentosIniciais * 40)  ;
+           novosClicks = (int)  (novasVisualizacoes * 0.12);
+           novosCompartilhamentos = (int)  (novosClicks * 0.15);
+           compartilhamentosIniciais = novosCompartilhamentos;
+           totaldeCliques = totaldeCliques  + novosClicks;
+           
+    	}
+        totaldeCliques = totaldeCliques + clicksIniciaisPorVisualizacoes;
+    	
+    	return totaldeCliques;
     	
     }
     
     
     public static int maximoDeCompartilhamentos(Double investimento) {
-		return 0;
+    	// obtem o valor inicial de visualizações por dinheiro investido
+    	int visualizacoesIniciaisPorInvestimento = (int) Math.ceil((double)(investimento * 30));
+    	// obtem os clicks iniciais do valor investido
+    	int clicksIniciaisPorVisualizacoes = (int) (visualizacoesIniciaisPorInvestimento * 0.12);
+    	// obtem os compartilhamentos
+    	int compartilhamentosIniciais = (int) (clicksIniciaisPorVisualizacoes * 0.15);
+    	int novasVisualizacoes =0;
+        int novosClicks =0 ;
+        int novosCompartilhamentos = 0;
+        int totalDeCompartilhamentos = 0;
+        // este for é para simular os compartilhamentos em sequência
+    	for(int i = 1; i <= 4; i++) {
+    	   
+    	   novasVisualizacoes = (int)  (compartilhamentosIniciais * 40)  ;
+           novosClicks = (int)  (novasVisualizacoes * 0.12);
+           novosCompartilhamentos = (int)  (novosClicks * 0.15);
+           compartilhamentosIniciais = novosCompartilhamentos;
+           totalDeCompartilhamentos = totalDeCompartilhamentos  + novosCompartilhamentos;
+           
+    	}
+        totalDeCompartilhamentos = totalDeCompartilhamentos + compartilhamentosIniciais;
     	
+    	return totalDeCompartilhamentos;
     }
 
 }

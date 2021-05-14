@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.capgemini.anuncios.calculator.AnuncioReport;
 import com.capgemini.anuncios.model.Anuncio;
 import com.capgemini.anuncios.service.AnunciosService;
 
@@ -89,6 +90,15 @@ public class AnunciosController {
 		System.out.println(a);
         service.update(a);
 		return "redirect:/anuncios/listall";
+	}
+	
+	@RequestMapping( method = {RequestMethod.GET}, path = "/calcular/{id}")
+	public ModelAndView anunciosCalcular(@PathVariable("id") Long id) {
+    ModelAndView v = new ModelAndView("anuncios/anunciocalculado");
+    AnuncioReport r = new AnuncioReport();
+    r.reportFill(service.findOne(id));
+    v.addObject("anuncio", r);
+		return v;
 	}
 
 }
