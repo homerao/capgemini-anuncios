@@ -4,7 +4,7 @@ Aplicação web para calcular a quantidade de visualizações de anuncios online
 # Sobre o projeto
 
 Este projeto é para entrega da seleção capgemini proway para o programa de aceleração de carreira e sua funcionalidade é calcular as visualizações de anuncios e 
-emitir o relatório com todos os dados do anuncio.
+emitir o relatório com todos os dados do anúncio.
 
 
 
