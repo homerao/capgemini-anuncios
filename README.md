@@ -13,9 +13,9 @@ emitir o relatório com todos os dados do anuncio.
 ![Web 1](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/principal.PNG)
 ### Tela de cadastro
 ![Web 2](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/cadastro.PNG)
-### Tela de equipe
+### Tela de listagem
 ![Web 3](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/listagem.PNG)
-### Tela de login
+### Tela de relatório
 ![Web 4](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/relatorio.PNG)
 
 
