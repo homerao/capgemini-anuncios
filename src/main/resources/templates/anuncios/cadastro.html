@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<title>Anuncios</title>
+</head>
+<body>
+Página de anuncios
+<a href="/">Home</a>
+
+<form action="/anuncios/cadastro-save" method="post" accept-charset="utf-8"  enctype="application/x-www-form-urlencoded">
+<label>Nome Anuncio</label>
+<input type="text" placeholder="Nome do anuncio" name="nomeAnuncio" />
+
+<label>Nome Cliente</label>
+<input type="text" placeholder="Nome do Cliente" name="cliente" />
+
+<label>Data Inicio</label>
+<input type="date" placeholder="Data de Inicio" pattern="yyyy-mm-dd" name="dataInicio" />
+
+<label>Data Fim</label>
+<input type="date" placeholder="Data de fim" pattern="yyyy-mm-dd" name="dataFim" />
+
+<label>Valor investido por dia</label>
+<input type="text" placeholder="Investimento diario $$$" name="investimentoDiario" />
+
+<input type="submit" name="btnSubmit" value="Enviar" />
+</form>
+</body>
+</html>

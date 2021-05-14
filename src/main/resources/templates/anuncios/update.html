@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+Update de anuncios
+<a href="/">Home</a>
+
+<form action="/anuncios/update-save" method="post" accept-charset="utf-8"  enctype="application/x-www-form-urlencoded">
+
+<input type="hidden" placeholder="Id"  th:value="${anuncio.id}" name="id" />
+<label>Nome Anuncio</label>
+<input type="text" placeholder="Nome do anuncio" th:value="${anuncio.nomeAnuncio}" name="nomeAnuncio" />
+
+<label>Nome Cliente</label>
+<input type="text" placeholder="Nome do Cliente" th:value="${anuncio.cliente}" name="cliente" />
+
+<label>Data Inicio</label>
+<input type="date" placeholder="Data de Inicio" th:value="${anuncio.dataInicio}" pattern="yyyy-mm-dd" name="dataInicio" />
+
+<label>Data Fim</label>
+<input type="date" placeholder="Data de fim" th:value="${anuncio.dataFim}" pattern="yyyy-mm-dd" name="dataFim" />
+
+<label>Valor investido por dia</label>
+<input type="text" placeholder="Investimento diario  $$$" th:value="${anuncio.investimentoDiario}" name="investimentoDiario" />
+
+<input type="submit" name="btnSubmit" value="Enviar" />
+</form>
+</body>
+</html>
