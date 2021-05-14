@@ -40,7 +40,7 @@ emitir o relatório com todos os dados do anúncio.
 # Como executar o projeto
 ```bash
 ## clonar repositório
-git clone https://github.com/homerao/app_node_filmes_online.git
+git clone https://github.com/homerao/capgemini-anuncios.git
 
 
 ```
