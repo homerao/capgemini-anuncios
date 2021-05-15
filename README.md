@@ -50,7 +50,9 @@ git clone https://github.com/homerao/capgemini-anuncios.git
 <aguarde o projeto ser clonado>
 cd capgemini-investimento
 mvn clean package deploy
-
+cd /
+cd projectInvestimento\capgemini\anuncios\0.0.1 
+java -jar anuncios-0.0.1.jar
 
 
 
