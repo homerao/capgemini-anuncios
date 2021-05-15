@@ -3,28 +3,63 @@
 <head>
 <meta charset="utf-8">
 <title>Anuncios</title>
+<script type="text/javascript" src="http://localhost:8080/js/validation.js"  ></script>
 </head>
 <body>
 Página de anuncios
 <a href="/">Home</a>
-
-<form action="/anuncios/cadastro-save" method="post" accept-charset="utf-8"  enctype="application/x-www-form-urlencoded">
+<script>
+function validaFormCadastro(){
+	   let errors = [];
+	   
+	   let cliente, valorInvestido, dataInicio, dataFim, nomeAnuncio
+	   
+	   cliente = document.getElementByName("cliente").value
+	   valorInvestido = document.getElementByName("investimentoDiario").value
+	   dataInicio = document.getElementByName("dataInicio").value
+	   dataFim = document.getElementByName("dataFim").value
+	   
+	   if(cliente == ""){
+	     errors.push("O campo clientes está vazio")
+	   }
+	   if(valorInvestido == "" || valorInvestido < 0){
+	      errors.push("O campo valor Investido está vazio ou com valores negativos")
+	   }
+	   if(dataFim == "" || dataInicio == ""){
+	     errors.push("Os campos de data inicio e fim precisam ser preenchidos")
+	   }
+	   
+	   if(errors.length > 0){
+	   preventDefault();
+	     Alert("Há erros no formulário por favor corrija")
+	     Alert(errors)
+	     return false;
+	   } else {
+	   return true
+	   }
+	   
+	 }
+</script>
+<form   action="/anuncios/cadastro-save" method="post" accept-charset="utf-8"  enctype="application/x-www-form-urlencoded">
 <label>Nome Anuncio</label>
-<input type="text" placeholder="Nome do anuncio" name="nomeAnuncio" />
+<input type="text" placeholder="Nome do anuncio" name="nomeAnuncio" required="true" />
 <br/>
 <label>Nome Cliente</label>
-<input type="text" placeholder="Nome do Cliente" name="cliente" />
+<input type="text" placeholder="Nome do Cliente" name="cliente" required="true" />
 <br/>
 <label>Data Inicio</label>
-<input type="date" placeholder="Data de Inicio" pattern="yyyy-mm-dd" name="dataInicio" />
+<input type="date" placeholder="Data de Inicio" pattern="yyyy-mm-dd" name="dataInicio"  required="true" />
 <br/>
 <label>Data Fim</label>
-<input type="date" placeholder="Data de fim" pattern="yyyy-mm-dd" name="dataFim" />
+<input type="date" placeholder="Data de fim" pattern="yyyy-mm-dd" name="dataFim" required="true"  />
 <br/>
 <label>Valor investido por dia</label>
-<input type="text" placeholder="Investimento diario $$$" name="investimentoDiario" />
+<input type="text" placeholder="Investimento diario $$$" name="investimentoDiario"  required="true" />
 <br/>
-<input type="submit" name="btnSubmit" value="Enviar" />
+<input onclick="validaFormCadastro()" type="submit" name="btnSubmit" value="Enviar" />
+
 </form>
+
+
 </body>
 </html>
