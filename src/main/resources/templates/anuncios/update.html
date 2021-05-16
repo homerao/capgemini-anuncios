@@ -12,19 +12,19 @@ Update de anuncios
 
 <input type="hidden" placeholder="Id"  th:value="${anuncio.id}" name="id" />
 <label>Nome Anuncio</label>
-<input type="text" placeholder="Nome do anuncio" th:value="${anuncio.nomeAnuncio}" name="nomeAnuncio" />
+<input type="text" placeholder="Nome do anuncio" required="true" th:value="${anuncio.nomeAnuncio}" name="nomeAnuncio" />
 
 <label>Nome Cliente</label>
-<input type="text" placeholder="Nome do Cliente" th:value="${anuncio.cliente}" name="cliente" />
+<input type="text" placeholder="Nome do Cliente" required="true" th:value="${anuncio.cliente}" name="cliente" />
 
 <label>Data Inicio</label>
-<input type="date" placeholder="Data de Inicio" th:value="${anuncio.dataInicio}" pattern="yyyy-mm-dd" name="dataInicio" />
+<input type="date" placeholder="Data de Inicio" required="true" th:value="${anuncio.dataInicio}" pattern="yyyy-mm-dd" name="dataInicio" />
 
 <label>Data Fim</label>
-<input type="date" placeholder="Data de fim" th:value="${anuncio.dataFim}" pattern="yyyy-mm-dd" name="dataFim" />
+<input type="date" placeholder="Data de fim" required="true" th:value="${anuncio.dataFim}" pattern="yyyy-mm-dd" name="dataFim" />
 
 <label>Valor investido por dia</label>
-<input type="text" placeholder="Investimento diario  $$$" th:value="${anuncio.investimentoDiario}" name="investimentoDiario" />
+<input type="text" placeholder="Investimento diario  $$$" required="true" th:value="${anuncio.investimentoDiario}" name="investimentoDiario" />
 
 <input type="submit" name="btnSubmit" value="Enviar" />
 </form>
