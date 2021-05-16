@@ -17,6 +17,8 @@ emitir o relatório com todos os dados do anúncio.
 ![Web 3](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/listagem.PNG)
 ### Tela de relatório
 ![Web 4](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/relatorio.PNG)
+### Manual de utilização do sistema
+![Web 5](https://github.com/homerao/capgemini-anuncios/blob/main/src/main/resources/static/imgs/manual.PNG)
 
 
 
