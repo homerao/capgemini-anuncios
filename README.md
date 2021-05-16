@@ -56,7 +56,7 @@ cd /
 cd projectInvestimento\capgemini\anuncios\0.0.1 
 java -jar anuncios-0.0.1.jar
 
-
+## Você também poderá executar o projeto pela sua IDE favorita.
 
 
 ```
